@@ -19,4 +19,4 @@ fi
 
 echo "$CERT_FILE" | base64 --decode > codesign.pfx
 
-osslsigncode sign -pkcs12 codesign.pfx -pass $CERT_PASSWORD -n "Arquivei Servicos OnLine" -i 'https://arquivei.com.br' -in $FILENAME -out signed-$FILENAME -t http://tsa.starfieldtech.com/
+osslsigncode sign -pkcs12 codesign.pfx -pass $CERT_PASSWORD -n "Arquivei Servicos OnLine" -i 'https://arquivei.com.br' -in $FILENAME -out signed-$FILENAME -t http://timestamp.comodoca.com/authenticode
